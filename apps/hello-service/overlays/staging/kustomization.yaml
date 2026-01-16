@@ -11,3 +11,6 @@ patches:
     target:
       kind: Deployment
       name: hello-service
+
+patches:
+  - path: configmap-patch.yaml
