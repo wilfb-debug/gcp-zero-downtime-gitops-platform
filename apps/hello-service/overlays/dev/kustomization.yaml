@@ -6,13 +6,8 @@ resources:
 
 nameSuffix: -dev
 
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
-resources:
-  - ../../base
-
-nameSuffix: -dev
-
-patchesStrategicMerge:
-  - replica-patch.yaml
+patches:
+  - path: replica-patch.yaml
+    target:
+      kind: Deployment
+      name: hello-service
