@@ -48,9 +48,6 @@ All application changes are delivered declaratively via Git, enabling safe, audi
 
 ## GitOps Deployment Proof
 
-### ArgoCD Applications
-![ArgoCD Applications](screenshots/argocd/argocd-applications-overview.png)
-
 ### GKE Autopilot Workloads
 ![GKE Workloads](screenshots/gke/gke-workloads-overview.png)
 
