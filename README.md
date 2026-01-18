@@ -48,14 +48,16 @@ All application changes are delivered declaratively via Git, enabling safe, audi
 
 ## GitOps Deployment Proof
 
+### ArgoCD Applications (Dev & Staging)
+![ArgoCD Dev](screenshots/argocd/argocd-hello-service-dev.png)
+![ArgoCD Staging](screenshots/argocd/argocd-hello-service-staging.png)
+
 ### GKE Autopilot Workloads
 ![GKE Workloads](screenshots/gke/gke-workloads-overview.png)
 
 ### hello-service (dev)
 ![Dev Deployment](screenshots/gke/gke-hello-service-dev-details.png)
 
-### hello-service (staging)
-![Staging Deployment](screenshots/gke/gke-hello-service-staging-details.png)
 
 ## Proof (GitOps in action)
 
