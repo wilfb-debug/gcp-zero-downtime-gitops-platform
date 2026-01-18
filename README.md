@@ -45,3 +45,13 @@ All application changes are delivered declaratively via Git, enabling safe, audi
 - Deploy platform to Google Kubernetes Engine (GKE)
 - Provision infrastructure using Terraform
 - Add monitoring and alerting (Prometheus & Grafana)
+
+## Proof (GitOps in action)
+
+### ArgoCD
+![ArgoCD Dev](screenshots/argocd/argocd-dev.png)
+![ArgoCD Staging](screenshots/argocd/argocd-staging.png)
+
+### App output
+![Dev UI](screenshots/app/dev.png)
+![Staging UI](screenshots/app/staging.png)
