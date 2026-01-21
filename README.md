@@ -63,11 +63,11 @@ README.md
 ## GitOps Deployment Proof
 
 ### Argo CD Applications
-![ArgoCD-Dev](screenshots/argocd/argocd-dev.png)
-![ArgoCD-Staging](screenshots/argocd/argocd-staging.png)
+![ArgoCD Dev](screenshots/argocd/argocd-dev.png)
+![ArgoCD Staging](screenshots/argocd/argocd-staging.png)
 
 ### GKE Autopilot Workloads (Console)
-![GKE-Workloads](screenshots/gke/gke-workloads-overview.png)
+![GKE Workloads](screenshots/gke/gke-workloads-overview.png)
 
 ### Application Deployments (Console)
 ![Dev Deployment](screenshots/gke/gke-hello-service-dev-details.png)
