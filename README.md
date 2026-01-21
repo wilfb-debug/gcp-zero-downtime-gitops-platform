@@ -1,9 +1,9 @@
-# gcp-zero-downtime-gitops-platform
-# Zero-Downtime GitOps Platform on Kubernetes
+# Zero-Downtime GitOps Platform on GKE Autopilot (Argo CD + Kustomize)
 
 ## Overview
-This project demonstrates a production-grade GitOps deployment platform using Argo CD and Kubernetes.  
-All application changes are delivered declaratively via Git, enabling safe, auditable, and zero-downtime deployments across multiple environments.
+This repository implements a **production-style GitOps delivery workflow** on **Google Kubernetes Engine (GKE) Autopilot** using **Argo CD** and **Kustomize**.
+
+All application changes are delivered **declaratively via Git** (single source of truth), enabling **repeatable, auditable, and zero-downtime** deployments across multiple environments.
 
 ## Architecture
 ### GitOps Control Flow
@@ -16,55 +16,63 @@ All application changes are delivered declaratively via Git, enabling safe, audi
 ![Zero Downtime](diagrams/zero-downtime-rollout.png)
 
 ## Key Concepts Demonstrated
-- GitOps with Argo CD (single source of truth)
-- Environment separation using Kustomize overlays
-- Zero-downtime rolling deployments
-- Declarative Kubernetes management
-- No direct kubectl access in production
+- GitOps with Argo CD as the reconciliation engine (Git = source of truth)
+- Environment separation using Kustomize overlays (`dev`, `staging`)
+- Rolling updates designed for zero-downtime service continuity
+- Declarative Kubernetes management (no manual drift)
+- Separation of concerns: platform components vs application workloads
 
 ## Repository Structure
+```text
+apps/
+  hello-service/
+    base/
+    overlays/
+      dev/
+      staging/
+screenshots/
+  argocd/
+  gke/
+  app/
+diagrams/
+README.md
 
 ## Deployment Flow
-1. Developer pushes changes to GitHub
-2. Argo CD continuously reconciles cluster state
-3. Kubernetes performs rolling updates with no downtime
-4. Service ensures traffic is always served
+1. A change is committed to GitHub (desired state updated)
+2. Argo CD detects the change and compares desired vs live state
+3. Argo CD applies the change to the cluster and continuously reconciles drift
+4. Kubernetes performs rolling updates to keep traffic served throughout
 
 ## Environments
 - **dev** – rapid iteration and validation
 - **staging** – production-like validation before release
 
-## Technologies Used
-- Kubernetes
-- Argo CD
-- Kustomize
-- GitHub
-- Docker
+## Technology Stack
+- **GKE Autopilot** (managed Kubernetes control plane + node lifecycle)
+- **Argo CD** (GitOps continuous reconciliation)
+- **Kustomize** (base + overlays for environment-specific configuration)
+- **GitHub** (source control / single source of truth)
+- **Docker
 
 ## Future Improvements
 - Deploy platform to Google Kubernetes Engine (GKE)
 - Provision infrastructure using Terraform
 - Add monitoring and alerting (Prometheus & Grafana)
 
+
 ## GitOps Deployment Proof
 
-### ArgoCD Applications (Dev & Staging)
-![ArgoCD Dev](screenshots/argocd/argocd-hello-service-dev.png)
-![ArgoCD Staging](screenshots/argocd/argocd-hello-service-staging.png)
-
-### GKE Autopilot Workloads
-![GKE Workloads](screenshots/gke/gke-workloads-overview.png)
-
-### hello-service (dev)
-![Dev Deployment](screenshots/gke/gke-hello-service-dev-details.png)
-
-
-## Proof (GitOps in action)
-
-### ArgoCD
+### Argo CD Applications
 ![ArgoCD Dev](screenshots/argocd/argocd-dev.png)
 ![ArgoCD Staging](screenshots/argocd/argocd-staging.png)
 
-### App output
+### GKE Autopilot Workloads (Console)
+![GKE Workloads](screenshots/gke/gke-workloads-overview.png)
+
+### Application Deployments (Console)
+![Dev Deployment](screenshots/gke/gke-hello-service-dev-details.png)
+![Staging Deployment](screenshots/gke/gke-hello-service-staging-details.png)
+
+### App Output
 ![Dev UI](screenshots/app/dev.png)
 ![Staging UI](screenshots/app/staging.png)
