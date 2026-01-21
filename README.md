@@ -75,3 +75,5 @@ README.md
 ### App Output
 ![dev ui](screenshots/app/dev.png)
 ![staging ui](screenshots/app/staging.png)
+![dev UI](screenshots/app/dev.png)
+![staging UI](screenshots/app/staging.png)
