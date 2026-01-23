@@ -63,15 +63,15 @@ README.md
 ## GitOps Deployment Proof
 
 ### Argo CD Applications
-![argocd dev](screenshots/argocd/argocd-dev.png)
-![argocd staging](screenshots/argocd/argocd-staging.png)
+![ArgoCD Dev](https://raw.githubusercontent.com/wilfb-debug/gcp-zero-downtime-gitops-platform/main/screenshots/argocd/argocd-dev.png)
+![ArgoCD Staging](https://raw.githubusercontent.com/wilfb-debug/gcp-zero-downtime-gitops-platform/main/screenshots/argocd/argocd-staging.png)
 
 ### GKE Autopilot Workloads (Console)
-![gke workloads](screenshots/gke/gke-workloads-overview.png)
+![GKE Workloads](https://raw.githubusercontent.com/wilfb-debug/gcp-zero-downtime-gitops-platform/main/screenshots/gke/gke-workloads-overview.png)
 
 ### Application Deployments (Console)
-![dev deployment](screenshots/gke/gke-hello-service-dev-details.png)
+![Dev Deployment](https://raw.githubusercontent.com/wilfb-debug/gcp-zero-downtime-gitops-platform/main/screenshots/gke/gke-hello-service-dev-details.png)
 
 ### App Output
-![dev ui](screenshots/app/dev.png)
-![staging ui](screenshots/app/staging.png)
+![Dev UI](https://raw.githubusercontent.com/wilfb-debug/gcp-zero-downtime-gitops-platform/main/screenshots/app/dev.png)
+![Staging UI](https://raw.githubusercontent.com/wilfb-debug/gcp-zero-downtime-gitops-platform/main/screenshots/app/staging.png)
