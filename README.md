@@ -36,6 +36,7 @@ screenshots/
   app/
 diagrams/
 README.md
+---
 
 ## Deployment Flow
 1. A change is committed to GitHub (desired state updated)
