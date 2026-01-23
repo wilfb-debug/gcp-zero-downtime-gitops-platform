@@ -76,3 +76,5 @@ README.md
 ### App Output
 ![Dev UI](https://raw.githubusercontent.com/wilfb-debug/gcp-zero-downtime-gitops-platform/main/screenshots/app/dev.png)
 ![Staging UI](https://raw.githubusercontent.com/wilfb-debug/gcp-zero-downtime-gitops-platform/main/screenshots/app/staging.png)
+
+> Note: Screenshots are stored in `/screenshots` and `/diagrams`. Rendering may vary depending on GitHub markdown preview.
